@@ -62,8 +62,6 @@ input {
 .section-heading {
   display: flex;
   font-size: 4.5rem;
-  /* gap: 2rem;
-  margin-bottom: 2rem; */
 }
 
 .section-heading span:nth-child(1) {
@@ -79,10 +77,6 @@ input {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* section {
-  padding: 40px 0;
-} */
 
 /* ---------------------------------------- HEADER SECTION --------------------------------------------- */
 #header {
@@ -117,6 +111,7 @@ input {
 #header nav a {
   font-size: 1.8rem;
   line-height: 150%;
+  color: #000000;
 }
 
 #header nav a.active {
@@ -140,7 +135,6 @@ input {
 #hero {
   position: relative;
   padding: 20rem 0 10rem;
-  /* border: 2px solid red; */
 }
 
 #hero .main-container {
@@ -154,27 +148,10 @@ input {
 }
 
 #hero .heading {
-  /* text-align: center; */
-  /* display: flex;
-  gap: 2rem; */
   font-size: 7rem;
   margin-bottom: 2rem;
   gap: 2rem;
 }
-
-/* #hero .heading span:nth-child(1) {
-  font-family: nexaLight;
-  font-weight: 400;
-}
-
-#hero .heading span:nth-child(2) {
-  font-family: nexaBold;
-  font-weight: 700;
-  background: linear-gradient(90deg, var(--secondary-color) 0%, #000 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
 
 #hero .description {
   max-width: 66rem;
@@ -258,7 +235,6 @@ input {
   overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 5rem;
-  /* border: 2px solid; */
 }
 
 #team .content-container {
@@ -310,9 +286,6 @@ input {
   height: 50rem;
 }
 
-#team .pic-3 {
-}
-
 #team .pic-4 {
   width: 25rem;
   height: 44rem;
@@ -351,19 +324,12 @@ input {
   color: #ffffff;
 }
 
-#team .slide-btns .left-btn {
-}
-
-#team .slide-btns .right-btn {
-}
-
 #team .team-circles {
   position: absolute;
   top: -10%;
   right: -4%;
   z-index: -1;
   width: 110rem;
-  /* height: 700rem; */
 }
 
 /* --------------------------------------- PRODUCTS SECTION -------------------------------------------- */
@@ -380,12 +346,6 @@ input {
 #products .heading {
   gap: 1rem;
   margin-bottom: 5rem;
-}
-
-#products .heading span:nth-child(1) {
-}
-
-#products .heading span:nth-child(2) {
 }
 
 #products .tabs {
@@ -438,9 +398,6 @@ input {
   position: relative;
 }
 
-#products .card-photo img {
-}
-
 #products .card-photo .shadow {
   position: absolute;
   left: 0;
@@ -457,9 +414,6 @@ input {
   margin-top: -1rem;
   position: relative;
   z-index: 2;
-}
-
-#products .card {
 }
 
 /* --------------------------------------- FEATURES SECTION -------------------------------------------- */
@@ -495,9 +449,6 @@ input {
 #features .feature-photo {
   width: 15rem;
   margin-bottom: 2.5rem;
-}
-
-#features .feature-photo img {
 }
 
 #features .feature-heading {
