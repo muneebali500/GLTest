@@ -6,7 +6,7 @@ This is a Frontend Development task that includes designing and development of a
 
 - Home Page: Includes a compelling headline, key selling points, and a signup CTA.
 
-[Link to Live Project]()
+[Link to Live Project](https://gltemplate.netlify.app/)
 
 ## Technologies Used
 
@@ -32,6 +32,6 @@ The project was deployed to Github pages
 
 #### Forking the repository
 
-1. Log in to GitHub and navigate to this project's repository: [HTML Template](https://github.com/muneebali500/fifty5bytes-test)
+1. Log in to GitHub and navigate to this project's repository: [HTML Template](https://github.com/muneebali500/GLTest)
 2. Just above the navigation menu of the repository (above the Settings button) locate the Fork button
 3. The original copy of the repository is now copied on your GitHub account which allows you to view and/or work on the codes without affecting the original work
