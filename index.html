@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/browser-compatible.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js" defer></script>
+
+    <title>GREEN LAMBDA - TEST</title>
+  </head>
+  <body>
+    <!------------------------------------------ HEADER SECTION -------------------------------------------->
+    <header id="header">
+      <div class="main-container">
+        <div class="content-container">
+          <img
+            src="/images/logo.png"
+            alt="Company Logo"
+            loading="lazy"
+            class="company-logo"
+          />
+
+          <nav class="nav">
+            <a href="#" class="active">Home</a>
+            <a href="#">Teams</a>
+            <a href="#">Products</a>
+            <a href="#">Contact Us</a>
+          </nav>
+
+          <button class="demo-btn">Request a demo</button>
+        </div>
+      </div>
+    </header>
+
+    <!------------------------------------------ HERO SECTION ---------------------------------------------->
+    <section id="hero">
+      <div class="main-container">
+        <div class="content-container">
+          <div id="hero-header" class="animated-text hidden">
+            <h1 class="section-heading heading">
+              <span>Lorem</span> <span>ipsum simply</span>
+            </h1>
+
+            <p class="description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+
+          <figure>
+            <img
+              src="/images/hero-img.png"
+              alt="Hero Image"
+              loading="lazy"
+              class="hero-img"
+            />
+
+            <button class="bottom-btn">
+              <img
+                src="/images/bottom-down.png"
+                alt="Down Image"
+                loading="lazy"
+              />
+            </button>
+          </figure>
+        </div>
+
+        <img
+          src="/images/green-circle.png"
+          alt="Green Circle"
+          loading="lazy"
+          class="green-circle"
+        />
+        <img
+          src="/images/ellipse.png"
+          alt="Blur Circle"
+          loading="lazy"
+          class="blur-cirle-left"
+        />
+        <img
+          src="/images/ellipse.png"
+          alt="Blur Circle"
+          loading="lazy"
+          class="blur-circle-right"
+        />
+        <img
+          src="/images/triangle-black.png"
+          alt="Triangle Black"
+          loading="lazy"
+          class="triangle-black"
+        />
+        <img src="/images/frame.png" alt="Frame" loading="lazy" class="frame" />
+      </div>
+
+      <img
+        src="/images/partial-circle.png"
+        alt="Frame"
+        loading="lazy"
+        class="partial-circle"
+      />
+    </section>
+
+    <!------------------------------------------ TEAM SECTION ---------------------------------------------->
+    <section id="team">
+      <div class="content-container">
+        <div class="main-container">
+          <div id="team-header" class="animated-text hidden">
+            <h2 class="section-heading heading">
+              <span>Meet</span> <span>Our Team</span>
+            </h2>
+            <p class="description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <ul id="slides-container" class="slides">
+            <li class="slide">
+              <figure class="member-pic pic-1">
+                <img
+                  src="/images/team-member-1.png"
+                  alt="Man with white hair and beared smiling"
+                  loading="lazy"
+                />
+              </figure>
+              <span class="member-name">Lorem Ipsum</span>
+            </li>
+
+            <li class="slide">
+              <figure class="member-pic pic-2">
+                <img
+                  src="/images/team-member-2.png"
+                  alt="Woman with blonde hair smiling"
+                  loading="lazy"
+                />
+              </figure>
+              <span class="member-name">Lorem Ipsum</span>
+            </li>
+
+            <li class="slide">
+              <figure class="member-pic pic-3">
+                <img
+                  src="/images/team-member-3.png"
+                  alt="Four students stairing"
+                  loading="lazy"
+                />
+              </figure>
+              <span class="member-name">Lorem Ipsum</span>
+            </li>
+
+            <li class="slide">
+              <figure class="member-pic pic-4">
+                <img
+                  src="/images/team-member-4.png"
+                  alt="Woman with black curly hair smiling"
+                  loading="lazy"
+                />
+              </figure>
+              <span class="member-name">Lorem Ipsum</span>
+            </li>
+          </ul>
+
+          <ul class="slide-btns">
+            <li>
+              <button id="slide-left-btn" class="left-btn">&#x3c;</button>
+            </li>
+            <li>
+              <button id="slide-right-btn" class="right-btn active">
+                &#x3e;
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="/images/team-circles.png"
+          alt="Four Dashed Circle"
+          loading="lazy"
+          class="team-circles"
+        />
+      </div>
+    </section>
+
+    <!-------------------------------------- PRODUCTS SECTION ---------------------------------------------->
+    <section id="products" class="">
+      <div class="main-container">
+        <div class="content-container">
+          <div id="products-header" class="animated-text hidden">
+            <h2 class="section-heading heading">
+              <span>Explore</span> <span>New Products</span>
+            </h2>
+          </div>
+
+          <ul class="tabs">
+            <li class="tab tab-active">Domain 1</li>
+            <li class="tab">Domain 2</li>
+            <li class="tab">Domain 3</li>
+            <li class="tab">Domain 4</li>
+          </ul>
+
+          <div id="products-container" class="cards-container">
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the is simply dummy text of
+                the text of the is simply
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the is simply dummy text of
+                the text of the is simply
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the
+              </p>
+            </div>
+
+            <div class="card">
+              <figure class="card-photo">
+                <img
+                  src="/images/products-img.png"
+                  alt="Technology"
+                  loading="lazy"
+                />
+                <img
+                  src="/images/products-shadow.png"
+                  alt="Shadow"
+                  loading="lazy"
+                  class="shadow"
+                />
+              </figure>
+
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the is simply dummy text of
+                the text of the is simply
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------- FEATURES SECTION ---------------------------------------------->
+    <section id="features" class="features">
+      <div class="main-container">
+        <div class="content-container">
+          <h2 class="section-heading heading">
+            <span>Lorem </span> <span>ipsum simply</span>
+          </h2>
+
+          <div class="features-container">
+            <div class="feature">
+              <figure class="feature-photo">
+                <img
+                  src="/images/feature-img.png"
+                  alt="Circle"
+                  loading="lazy"
+                />
+              </figure>
+              <h3 class="feature-heading">Lorem Ipsum</h3>
+              <p class="feature-description">
+                standard dummy text ever since the 1500s, when an unknown prin
+              </p>
+            </div>
+
+            <div class="feature">
+              <figure class="feature-photo">
+                <img
+                  src="/images/feature-img.png"
+                  alt="Circle"
+                  loading="lazy"
+                />
+              </figure>
+              <h3 class="feature-heading">Lorem Ipsum</h3>
+              <p class="feature-description">
+                standard dummy text ever since the 1500s, when an unknown prin
+              </p>
+            </div>
+
+            <div class="feature">
+              <figure class="feature-photo">
+                <img
+                  src="/images/feature-img.png"
+                  alt="Circle"
+                  loading="lazy"
+                />
+              </figure>
+              <h3 class="feature-heading">Lorem Ipsum</h3>
+              <p class="feature-description">
+                standard dummy text ever since the 1500s, when an unknown prin
+              </p>
+            </div>
+
+            <div class="feature">
+              <figure class="feature-photo">
+                <img
+                  src="/images/feature-img.png"
+                  alt="Circle"
+                  loading="lazy"
+                />
+              </figure>
+              <h3 class="feature-heading">Lorem Ipsum</h3>
+              <p class="feature-description">
+                standard dummy text ever since the 1500s, when an unknown prin
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------- CONTACT SECTION ---------------------------------------------->
+    <section id="contact" class="contact">
+      <div class="main-container">
+        <div class="content-container">
+          <div class="left-side">
+            <h3>Try Demo</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book
+            </p>
+            <button>Request a Demo</button>
+
+            <img
+              src="/images/triangle.png"
+              alt="triangle"
+              loading="lazy"
+              class="triangle-white"
+            />
+          </div>
+
+          <div class="right-side">
+            <h3>Contact Us</h3>
+            <p>Lorem Ipsum is simply dummy text of the</p>
+          </div>
+
+          <figure class="logo-circle">
+            <img
+              src="/images/logo.png"
+              alt="Company Logo"
+              loading="lazy"
+              class="logo"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------- FOOTER SECTION ----------------------------------------------->
+    <footer id="footer">
+      <div class="main-container">
+        <div class="content-container">
+          <figure class="logo-circle">
+            <img
+              src="/images/logo.png"
+              alt="Company Logo"
+              loading="lazy"
+              class="logo"
+            />
+          </figure>
+
+          <p class="description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+
+          <div class="bottom-container">
+            <p>Lorem Ipsum © 2022. All rights reserved.</p>
+
+            <div class="social-media">
+              <span>Follow us at:</span>
+              <ul>
+                <a href="#" class="icon"
+                  ><img
+                    src="/images/facebook.png"
+                    alt="Facebook Icon"
+                    loading="lazy"
+                /></a>
+                <a href="#" class="icon"
+                  ><img
+                    src="/images/instagram.png"
+                    alt="Instagram Icon"
+                    loading="lazy"
+                /></a>
+                <a href="#" class="icon"
+                  ><img
+                    src="/images/linkedin.png"
+                    alt="LinkedIn Icon"
+                    loading="lazy"
+                /></a>
+                <a href="#" class="icon"
+                  ><img
+                    src="/images/youtube.png"
+                    alt="Youtube Icon"
+                    loading="lazy"
+                /></a>
+              </ul>
+            </div>
+
+            <nav>
+              <a href="">privacy policy</a>
+              <span>&#124;</span>
+              <a href="">EULA</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

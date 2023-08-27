@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/browser-compatible.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+
+    <script type="module" src="/js/index.js" defer></script>
+    <script type="module" src="/js/contact.js" defer></script>
+
+    <title>ZENHOST - Contact</title>
+  </head>
+  <body class="contact-page">
+    <header class="header conatct-header">
+      <div class="main-container" aria-label="banner">
+        <h2 class="company-logo" tabindex="0">
+          <a href="/"> <span>zen</span><span>host</span></a>
+        </h2>
+
+        <nav id="nav-links" class="nav-links">
+          <a class="nav-item" href="#" tabindex="0">Dedicated servers</a>
+          <a class="nav-item" href="#" tabindex="0">VPS hosting</a>
+          <a class="nav-item" href="#" tabindex="0">Shared hosting</a>
+          <a class="nav-item" href="#" tabindex="0">Domain</a>
+          <span aria-hidden="true">......</span>
+          <a class="nav-item" href="#" tabindex="0">About us</a>
+          <a class="nav-item" href="nested/contact.html" tabindex="0"
+            >Contact</a
+          >
+          <a class="nav-item" href="#" tabindex="0">Blog</a>
+        </nav>
+      </div>
+
+      <!-- The hamburger and close nav icons should be buttons -->
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="Open Navigation Menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <button
+        id="close-nav-icon"
+        class="close-nav-icon"
+        aria-label="Close Navigation Menu"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="contact-banner">
+        <h1>Contact Us</h1>
+      </section>
+
+      <section class="contact-form__section">
+        <div class="main-container">
+          <form id="contact-form" class="contact-form">
+            <div class="input-group">
+              <input
+                id="username"
+                type="text"
+                placeholder="Full Name"
+                required
+                aria-required="true"
+                aria-label="Full Name"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                id="user-email"
+                type="email"
+                placeholder="Email Address"
+                required
+                aria-required="true"
+                aria-label="Email Address"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                id="user-phone"
+                type="text"
+                placeholder="Phone Number"
+                required
+                aria-required="true"
+                aria-label="Phone Number"
+              />
+            </div>
+
+            <div class="input-group">
+              <textarea
+                id="user-message"
+                cols="30"
+                rows="12"
+                placeholder="Message..."
+                required
+                aria-required="true"
+                aria-label="Message"
+              ></textarea>
+            </div>
+
+            <button id="contact-btn" class="contact-btn">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- SECTION FOOTER STARTS -->
+    <footer class="section-footer">
+      <div class="main-container">
+        <p class="copyright">© 2022 Zenhost</p>
+
+        <nav class="footer-nav">
+          <a class="nav-item" href="#">dedicated servers</a>
+          <a class="nav-item" href="#">VPS hosting</a>
+          <a class="nav-item" href="#">Shared hosting</a>
+          <a class="nav-item" href="#">domain</a>
+          <span>....</span>
+          <a class="nav-item" href="#">About us</a>
+          <a class="nav-item" href="#">contact</a>
+          <a class="nav-item" href="#">blog</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
