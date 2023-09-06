@@ -21,6 +21,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,7 +47,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  border: 1px solid red;
+  border: 1px solid var(--primary-color);
 }
 
 input {
@@ -80,7 +81,8 @@ input {
 
 /* ---------------------------------------- HEADER SECTION --------------------------------------------- */
 #header {
-  padding-top: 6rem;
+  /* padding-top: 6rem; */
+  padding: 2.6rem 0;
   width: 100%;
   background: white;
   position: fixed;
@@ -89,7 +91,6 @@ input {
 }
 
 #header.fixed {
-  padding: 2.6rem 0;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
@@ -314,9 +315,12 @@ input {
 #team .slide-btns li button {
   width: 4rem;
   height: 4rem;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   border-radius: 50%;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #team .slide-btns li button.active {

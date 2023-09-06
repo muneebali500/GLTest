@@ -5,10 +5,13 @@ const teamHeaderEl = document.getElementById("team-header");
 const productsHeaderEl = document.getElementById("products-header");
 const productTabEls = document.querySelectorAll(".tab");
 const productsContainer = document.getElementById("products-container");
+const productCards = productsContainer.querySelectorAll(".card");
+const productsEls = document.querySelectorAll(".cards");
 const slidesContainer = document.getElementById("slides-container");
 const slideEls = document.querySelectorAll(".slide");
 const slideLeftBtn = document.getElementById("slide-left-btn");
 const slideRightBtn = document.getElementById("slide-right-btn");
+const headerNavLinks = document.querySelectorAll("#header-nav a");
 
 /////////// EVENT LISTENER SHOWS HERO SECTION HEADERS ON INITIAL LOAD /////////////
 window.addEventListener("load", () => {
@@ -18,37 +21,39 @@ window.addEventListener("load", () => {
 /////////// EVENT LISTENER CALLS ELEMENTS ANIMATEDLY WHEN IN VIEWPORT /////////////
 window.addEventListener("scroll", () => {
   headerEl.classList.toggle("fixed", window.pageYOffset > 120);
+
   showHiddenElement(teamHeaderEl);
   showHiddenElement(productsHeaderEl);
+});
+
+///////////////////////// EVENT LISTENER FOR NAV LINKS ////////////////////
+headerNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    headerNavLinks.forEach((link) => {
+      if (link.classList.contains("active")) {
+        link.classList.remove("active");
+      }
+    });
+
+    link.classList.add("active");
+  });
 });
 
 //////////// FUNCTIONS DISPLAYS RELEVANT PRODUCTS ON THE BASIS OF TABS SELECTION ///////////////
 productTabEls.forEach((tab, index) => {
   tab.addEventListener("click", () => {
     productTabEls.forEach((tab) => {
-      tab.classList.remove("tab-active");
+      if (tab.classList.contains("tab-active")) {
+        tab.classList.remove("tab-active");
+      }
     });
     tab.classList.add("tab-active");
 
-    const cardTemplate = `
-      <figure class="card-photo">
-        <img src="/images/products-img.png" alt="Technology" loading="lazy" />
-        <img src="/images/products-shadow.png" alt="Shadow" loading="lazy" class="shadow" />
-      </figure>
-      <p class="card-description">
-        Lorem Ipsum is simply dummy text of the is simply dummy text of the text of the is simply
-      </p>
-    `;
-
     productsContainer.innerHTML = "";
-
     const count = index === 0 ? 8 : index;
 
     for (let i = 0; i <= count; i++) {
-      const element = document.createElement("div");
-      element.classList.add("card");
-      element.innerHTML = cardTemplate;
-      productsContainer.appendChild(element);
+      productsContainer.appendChild(productCards[i]);
     }
   });
 });
@@ -78,15 +83,10 @@ function slideRight() {
 
 function updateSlideTransform() {
   const currentSlideWidth = slideEls[currentSlideIndex].clientWidth;
+
   slidesContainer.style.transform = `translateX(-${
     currentSlideIndex * currentSlideWidth
   }px)`;
-
-  slideLeftBtn.classList.toggle("active", currentSlideIndex > 0);
-  slideRightBtn.classList.toggle(
-    "active",
-    currentSlideIndex < slideEls.length - 1
-  );
 }
 
 function updateSlideButtonStates() {
@@ -105,6 +105,7 @@ function showHiddenElement(element) {
 ///////////////// FUNCTION CHECKS IF THE ELEMENT IS IN VIEWPORT ////////////////
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
+
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&

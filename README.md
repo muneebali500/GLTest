@@ -19,6 +19,7 @@ This is a Frontend Development task that includes designing and development of a
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - used heavily for debugging during development process.
 - [Git](https://git-scm.com/) - the Git feature in VS Code was used for version control and push to github.
 - [Github](https://github.com/) - Github is used to store project's code remotely.
+- [Vite](https://vitejs.dev/) - used for optimization and make the project ready for production
 
 ## Deployment
 
@@ -26,9 +27,9 @@ This is a Frontend Development task that includes designing and development of a
 
 The project was developed using VS Code editor and its integrated version control feature to commit gits, which are then pushed to GitHub in order to store the codes remotely.
 
-#### Github Pages
+#### Netlify
 
-The project was deployed to Github pages
+The project was deployed to Netlify
 
 #### Forking the repository
 
