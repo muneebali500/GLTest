@@ -12,41 +12,42 @@ const slideEls = document.querySelectorAll(".slide");
 const slideLeftBtn = document.getElementById("slide-left-btn");
 const slideRightBtn = document.getElementById("slide-right-btn");
 const headerNavLinks = document.querySelectorAll("#header-nav a");
+const sections = [
+  "hero",
+  "team",
+  "products",
+  "contact",
+  "features",
+  "footer",
+].map((id) => document.querySelector(`#${id}`));
 
 /////////// EVENT LISTENER SHOWS HERO SECTION HEADERS ON INITIAL LOAD /////////////
 window.addEventListener("load", () => {
   heroHeaderEl.classList.remove("hidden");
 });
 
-/////////// EVENT LISTENER CALLS ELEMENTS ANIMATEDLY WHEN IN VIEWPORT /////////////
+/////////// FUNCTION TO HANDLE SCROLL ELEMENTS /////////////
 window.addEventListener("scroll", () => {
   headerEl.classList.toggle("fixed", window.pageYOffset > 120);
 
   showHiddenElement(teamHeaderEl);
   showHiddenElement(productsHeaderEl);
+
+  sections.forEach((section, index) => setActiveNavLink(section, index));
 });
 
-///////////////////////// EVENT LISTENER FOR NAV LINKS ////////////////////
-headerNavLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    headerNavLinks.forEach((link) => {
-      if (link.classList.contains("active")) {
-        link.classList.remove("active");
-      }
-    });
-
-    link.classList.add("active");
-  });
-});
+// Function to set the "active" class on the appropriate headerNavLink
+function setActiveNavLink(section, index) {
+  if (isElementXPercentInViewport(section, 20)) {
+    headerNavLinks.forEach((link) => link.classList.remove("active"));
+    headerNavLinks[index].classList.add("active");
+  }
+}
 
 //////////// FUNCTIONS DISPLAYS RELEVANT PRODUCTS ON THE BASIS OF TABS SELECTION ///////////////
 productTabEls.forEach((tab, index) => {
   tab.addEventListener("click", () => {
-    productTabEls.forEach((tab) => {
-      if (tab.classList.contains("tab-active")) {
-        tab.classList.remove("tab-active");
-      }
-    });
+    productTabEls.forEach((tab) => tab.classList.remove("tab-active"));
     tab.classList.add("tab-active");
 
     productsContainer.innerHTML = "";
@@ -97,19 +98,23 @@ function updateSlideButtonStates() {
   );
 }
 
-////////////////// FUNCTION CREATED TO USE REPITIVE LOGIC ///////////////////////
+////////////////// FUNCTION CREATED TO TOGGLE ELEMENTS ANIMATEDLY WHEN IN VIEWPORT ///////////////////////
 function showHiddenElement(element) {
-  element.classList.toggle("hidden", !isInViewport(element));
+  element.classList.toggle(
+    "hidden",
+    !isElementXPercentInViewport(element, 100)
+  );
 }
 
 ///////////////// FUNCTION CHECKS IF THE ELEMENT IS IN VIEWPORT ////////////////
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
+const isElementXPercentInViewport = function (el, percentVisible) {
+  let rect = el.getBoundingClientRect(),
+    windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= window.innerHeight &&
-    rect.right <= window.innerWidth
+  return !(
+    Math.floor(100 - ((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100) <
+      percentVisible ||
+    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) <
+      percentVisible
   );
-}
+};
