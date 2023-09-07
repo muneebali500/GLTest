@@ -770,9 +770,9 @@ input {
 @media only screen and (max-width: 768px) {
   #header .nav {
     position: fixed;
-    top: 50px;
+    top: 38px;
     left: 0;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 38px);
     width: 40rem;
     background-color: #ffffff;
     flex-direction: column;
