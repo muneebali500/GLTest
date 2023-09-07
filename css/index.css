@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -55,7 +56,7 @@ input {
 }
 
 .main-container {
-  width: 120rem;
+  width: 110rem;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -81,7 +82,6 @@ input {
 
 /* ---------------------------------------- HEADER SECTION --------------------------------------------- */
 #header {
-  /* padding-top: 6rem; */
   padding: 2.6rem 0;
   width: 100%;
   background: white;
@@ -98,6 +98,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 #header .company-logo {
@@ -105,7 +106,15 @@ input {
 }
 
 #header nav {
+  flex: 1;
   display: flex;
+  align-items: center;
+}
+
+#header nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: center;
   gap: 5rem;
 }
 
@@ -127,9 +136,20 @@ input {
   border-radius: 4px;
   background: var(--primary-color);
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+#header .hamburger,
+#header .cross-mark {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  font-size: 3rem;
+  display: none;
+  border: none;
+  color: var(--primary-color);
 }
 
 /* ----------------------------------------- HERO SECTION ---------------------------------------------- */
@@ -158,7 +178,7 @@ input {
 #hero .description {
   max-width: 66rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
@@ -168,7 +188,8 @@ input {
 }
 
 #hero .hero-img {
-  width: 90rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 #hero .bottom-btn {
@@ -251,8 +272,9 @@ input {
 
 #team .description {
   width: 40rem;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 150%;
+  margin-bottom: 1rem;
 }
 
 #team .slider-container {
@@ -317,7 +339,7 @@ input {
 #team .slide-btns li button {
   width: 4rem;
   height: 4rem;
-  font-size: 1.4rem;
+  font-size: 14px;
   border-radius: 50%;
   background: transparent;
   display: flex;
@@ -359,8 +381,9 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
-  padding: 1.4rem 5rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 1.4rem 5%;
   border-radius: 1.2rem;
   border: 1.55px solid var(--primary-color);
   box-shadow: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
@@ -369,7 +392,7 @@ input {
 
 #products .tab {
   font-family: nexaBold;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   width: 14rem;
@@ -382,7 +405,7 @@ input {
 
 #products .tab-active {
   color: #fff;
-  border-radius: 1.2rem;
+  border-radius: 2rem;
   background: var(--primary-color);
   box-shadow: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
 }
@@ -407,8 +430,9 @@ input {
 
 #products .card-photo .shadow {
   position: absolute;
-  left: 0;
+  left: -3px;
   top: 0;
+  width: 102%;
 }
 
 #products .card-description {
@@ -442,8 +466,10 @@ input {
 
 #features .features-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
   width: 100rem;
   max-width: 90%;
 }
@@ -469,7 +495,7 @@ input {
 #features .feature-description {
   text-align: center;
   color: #515151;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 400;
   line-height: 2rem;
 }
@@ -521,7 +547,7 @@ input {
   color: #fff;
   font-size: 1.8rem;
   line-height: 3.3rem;
-  width: 42rem;
+  max-width: 40rem;
   margin-bottom: 3.4rem;
 }
 
@@ -531,13 +557,13 @@ input {
 
 #contact button {
   display: flex;
-  width: 15rem;
-  padding: 10px;
+  padding: 10px 14px;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
   background: #48b74b;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 #contact .triangle-white {
@@ -599,10 +625,10 @@ input {
 }
 
 #footer .description {
-  width: 77rem;
+  max-width: 77rem;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 16px;
   line-height: 170%; /* 30.6px */
   margin-bottom: 4rem;
 }
@@ -612,18 +638,20 @@ input {
   padding-top: 1.6rem;
   min-width: 100%;
   display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 #footer .bottom-container > p {
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 130%; /* 19.5px */
   opacity: 0.4;
 }
 
 #footer .social-media {
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 130%;
   display: flex;
   align-items: center;
@@ -634,6 +662,11 @@ input {
 #footer .social-media ul {
   display: flex;
   gap: 1.2rem;
+}
+
+#footer .social-media .icon {
+  display: flex;
+  align-items: center;
 }
 
 #footer .social-media .icon img {
@@ -650,7 +683,7 @@ input {
 
 #footer nav a {
   color: #000;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 130%; /* 18.2px */
   opacity: 0.7;
 }
@@ -669,5 +702,173 @@ input {
 @media only screen and (min-width: 1530px) {
   html {
     font-size: 88%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 52%;
+  }
+
+  #header nav a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 45%;
+  }
+
+  #products .card-description,
+  #contact p {
+    font-size: 16px;
+  }
+
+  #products .card-photo img:first-child {
+    height: 24rem;
+  }
+
+  #products .card-description {
+    margin-top: -3rem;
+  }
+
+  #contact .content-container {
+    flex-direction: column;
+  }
+
+  #contact .left-side,
+  #contact .right-side {
+    flex: 1;
+    padding: 0 5%;
+    min-height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #contact p {
+    max-width: 100%;
+  }
+
+  #contact button {
+    align-self: center;
+    margin-bottom: 3rem;
+  }
+
+  #contact .logo-circle {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  #contact .logo {
+    width: 8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header .nav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 40rem;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 5rem;
+    padding-left: 5%;
+    box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: 0.4s linear;
+  }
+
+  #header .nav ul {
+    flex: 0;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+
+  #header .nav a {
+    font-size: 20px;
+  }
+
+  #header .nav a.active {
+    color: #000;
+  }
+
+  #header .hamburger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 40%;
+  }
+
+  #header .company-logo {
+    width: 24%;
+  }
+
+  #hero .green-circle,
+  #hero .blur-cirle-left,
+  #hero .triangle-black {
+    display: none;
+  }
+
+  #team .heading {
+    text-align: center;
+  }
+
+  #team .description {
+    width: 100%;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  #products .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #features .feature-heading {
+    font-size: 16px;
+  }
+
+  #features .feature-description {
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-heading {
+    font-size: 4rem;
+  }
+
+  #hero .heading {
+    font-size: 4.5rem;
+    justify-content: center;
+  }
+
+  #products .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #products .card-description {
+    margin-top: 0rem;
+  }
+
+  #contact .left-side,
+  #contact .right-side {
+    min-height: 55rem;
+  }
+
+  #footer .bottom-container {
+    justify-content: center;
+  }
+
+  #footer .bottom-container nav {
+    order: -1;
   }
 }
