@@ -82,12 +82,14 @@ input {
 
 /* ---------------------------------------- HEADER SECTION --------------------------------------------- */
 #header {
-  padding: 2.6rem 0;
   width: 100%;
   background: white;
   position: fixed;
   top: 0;
   z-index: 10;
+  height: 8rem;
+  display: flex;
+  align-items: center;
 }
 
 #header.fixed {
@@ -156,7 +158,6 @@ input {
 #hero {
   position: relative;
   padding: 20rem 0 10rem;
-  /* display: none; */
 }
 
 #hero .main-container {
@@ -246,11 +247,17 @@ input {
 }
 
 #hero .partial-circle {
-  width: 4rem;
-  height: 6rem;
   position: absolute;
-  left: 0;
+  left: -2.3rem;
   bottom: 12%;
+  border: 1.5rem solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, #80753d 7%, #000 100%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  width: 6rem;
+  height: 6rem;
 }
 
 /* ----------------------------------------- TEAM SECTION ---------------------------------------------- */
@@ -258,7 +265,6 @@ input {
   overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 5rem;
-  /* display: none; */
 }
 
 #team .content-container {
@@ -363,7 +369,6 @@ input {
 /* --------------------------------------- PRODUCTS SECTION -------------------------------------------- */
 #products {
   padding: 6rem 0;
-  /* display: none; */
 }
 
 #products .content-container {
@@ -450,7 +455,6 @@ input {
 /* --------------------------------------- FEATURES SECTION -------------------------------------------- */
 #features {
   padding: 6rem 0;
-  /* display: none; */
 }
 
 #features .content-container {
@@ -504,7 +508,6 @@ input {
 #contact {
   padding-top: 8rem;
   padding-bottom: 12rem;
-  /* display: none; */
 }
 
 #contact .content-container {
@@ -768,11 +771,15 @@ input {
 }
 
 @media only screen and (max-width: 768px) {
+  #header {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  }
+
   #header .nav {
     position: fixed;
-    top: 38px;
+    top: 8rem;
     left: 0;
-    height: calc(100vh - 38px);
+    height: calc(100vh - 8rem);
     width: 40rem;
     background-color: #ffffff;
     flex-direction: column;
@@ -801,6 +808,10 @@ input {
   #header .hamburger {
     display: block;
   }
+
+  #products .tab {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -809,7 +820,7 @@ input {
   }
 
   #header .company-logo {
-    width: 24%;
+    width: 32%;
   }
 
   #hero .green-circle,
