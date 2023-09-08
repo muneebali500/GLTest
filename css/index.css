@@ -154,6 +154,10 @@ input {
   color: var(--primary-color);
 }
 
+.section-description {
+  font-size: 16px;
+}
+
 /* ----------------------------------------- HERO SECTION ---------------------------------------------- */
 #hero {
   position: relative;
@@ -179,7 +183,6 @@ input {
 #hero .description {
   max-width: 66rem;
   text-align: center;
-  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
@@ -277,8 +280,7 @@ input {
 }
 
 #team .description {
-  width: 40rem;
-  font-size: 16px;
+  max-width: 34rem;
   line-height: 150%;
   margin-bottom: 1rem;
 }
@@ -628,10 +630,9 @@ input {
 }
 
 #footer .description {
-  max-width: 77rem;
+  max-width: 60rem;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  font-size: 16px;
   line-height: 170%; /* 30.6px */
   margin-bottom: 4rem;
 }
@@ -705,6 +706,10 @@ input {
 @media only screen and (min-width: 1530px) {
   html {
     font-size: 88%;
+  }
+
+  .section-description {
+    font-size: 18px;
   }
 }
 
