@@ -757,7 +757,9 @@ input {
   }
 
   #contact p {
+    width: 70rem;
     max-width: 100%;
+    margin: 0 auto 2rem;
   }
 
   #contact button {
@@ -814,6 +816,18 @@ input {
     display: block;
   }
 
+  #team .heading {
+    text-align: center;
+    margin-top: 7rem;
+  }
+
+  #team .description {
+    width: 70rem;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 5rem;
+  }
+
   #products .tab {
     font-size: 12px;
   }
@@ -832,16 +846,6 @@ input {
   #hero .blur-cirle-left,
   #hero .triangle-black {
     display: none;
-  }
-
-  #team .heading {
-    text-align: center;
-  }
-
-  #team .description {
-    width: 100%;
-    margin-bottom: 5rem;
-    text-align: center;
   }
 
   #products .cards-container {
