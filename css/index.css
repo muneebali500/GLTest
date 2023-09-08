@@ -1,8 +1,3 @@
-:root {
-  --primary-color: #80753d;
-  --secondary-color: #aaa58d;
-}
-
 @font-face {
   font-family: nexaLight;
   src: url("/fonts/nexa-light.otf");
@@ -13,13 +8,39 @@
   src: url("/fonts/nexa-bold.otf");
 }
 
+:root {
+  /* Colors */
+  --primary-color: #80753d;
+  --secondary-color: #aaa58d;
+  --black-color: #000;
+  --white-color: #fff;
+
+  /* Font Families */
+  --font-family-nexa-light: "nexaLight", sans-serif;
+  --font-family-nexa-bold: "nexaBold", sans-serif;
+
+  /* Font Sizes */
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
+  /* Box Shadows */
+  --box-shadow-light: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
+
+  /* Border Radius */
+  --border-radius-small: 0.8rem;
+  --border-radius-medium: 1.2rem;
+}
+
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
+/* Typography Styles */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -38,6 +59,7 @@ ul {
   list-style: none;
 }
 
+/* Common Styles */
 img {
   width: 100%;
   height: 100%;
@@ -55,35 +77,46 @@ input {
   outline: none;
 }
 
+/* Container Styles */
 .main-container {
   width: 110rem;
   max-width: 90%;
   margin: 0 auto;
 }
 
+/* Section Heading Styles */
 .section-heading {
   display: flex;
   font-size: 4.5rem;
 }
 
 .section-heading span:nth-child(1) {
-  font-family: nexaLight;
+  font-family: var(--font-family-nexa-light);
   font-weight: 400;
 }
 
 .section-heading span:nth-child(2) {
-  font-family: nexaBold;
+  font-family: var(--font-family-nexa-bold);
   font-weight: 700;
-  background: linear-gradient(90deg, var(--secondary-color) 0%, #000 100%);
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--black-color) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Section Description Styles */
+.section-description {
+  font-size: var(--font-size-medium);
+}
+
 /* ---------------------------------------- HEADER SECTION --------------------------------------------- */
 #header {
   width: 100%;
-  background: white;
+  background: var(--white-color);
   position: fixed;
   top: 0;
   z-index: 10;
@@ -93,7 +126,7 @@ input {
 }
 
 #header.fixed {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-light);
 }
 
 #header .content-container {
@@ -121,9 +154,9 @@ input {
 }
 
 #header nav a {
-  font-size: 1.8rem;
+  font-size: var(--font-size-large);
   line-height: 150%;
-  color: #000000;
+  color: var(--black-color);
 }
 
 #header nav a.active {
@@ -137,8 +170,8 @@ input {
   align-items: center;
   border-radius: 4px;
   background: var(--primary-color);
-  color: #fff;
-  font-size: 16px;
+  color: var(--white-color);
+  font-size: var(--font-size-medium);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -152,10 +185,6 @@ input {
   display: none;
   border: none;
   color: var(--primary-color);
-}
-
-.section-description {
-  font-size: 16px;
 }
 
 /* ----------------------------------------- HERO SECTION ---------------------------------------------- */
@@ -325,8 +354,8 @@ input {
 }
 
 #team .member-name {
-  color: #fff;
-  font-family: nexaBold;
+  color: var(--white-color);
+  font-family: var(--font-family-nexa-bold);
   font-size: 2rem;
   font-weight: 700;
   line-height: 100%; /* 22.925px */
@@ -347,7 +376,7 @@ input {
 #team .slide-btns li button {
   width: 4rem;
   height: 4rem;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   border-radius: 50%;
   background: transparent;
   display: flex;
@@ -391,14 +420,14 @@ input {
   gap: 4rem;
   flex-wrap: wrap;
   padding: 1.4rem 5%;
-  border-radius: 1.2rem;
+  border-radius: var(--border-radius-medium);
   border: 1.55px solid var(--primary-color);
-  box-shadow: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--box-shadow-medium);
   margin-bottom: 10rem;
 }
 
 #products .tab {
-  font-family: nexaBold;
+  font-family: var(--font-family-nexa-bold);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
@@ -411,7 +440,7 @@ input {
 }
 
 #products .tab-active {
-  color: #fff;
+  color: var(--white-color);
   border-radius: 2rem;
   background: var(--primary-color);
   box-shadow: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
@@ -425,7 +454,7 @@ input {
 }
 
 #products .card {
-  border-radius: 0.8rem;
+  border-radius: var(--border-radius-small);
   background: var(--primary-color);
   box-shadow: 0px 4px 4rem 0px rgba(0, 0, 0, 0.12);
   padding: 1.8rem 1.5rem;
@@ -444,7 +473,7 @@ input {
 
 #products .card-description {
   color: #ffffff;
-  font-family: nexaBold;
+  font-family: var(--font-family-nexa-bold);
   font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.5;
@@ -492,7 +521,7 @@ input {
 }
 
 #features .feature-heading {
-  font-family: nexaBold;
+  font-family: var(--font-family-nexa-bold);
   font-size: 2rem;
   font-weight: 700;
   line-height: 4.2rem; /* 42px */
@@ -501,9 +530,9 @@ input {
 #features .feature-description {
   text-align: center;
   color: #515151;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.5;
 }
 
 /* --------------------------------------- CONTACT SECTION --------------------------------------------- */
@@ -534,7 +563,7 @@ input {
 }
 
 #contact h3 {
-  font-family: nexaBold;
+  font-family: var(--font-family-nexa-bold);
   font-size: 5.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
@@ -549,7 +578,7 @@ input {
 }
 
 #contact p {
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.8rem;
   line-height: 3.3rem;
   max-width: 40rem;
@@ -649,13 +678,13 @@ input {
 }
 
 #footer .bottom-container > p {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   line-height: 130%; /* 19.5px */
   opacity: 0.4;
 }
 
 #footer .social-media {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   line-height: 130%;
   display: flex;
   align-items: center;
@@ -687,7 +716,7 @@ input {
 
 #footer nav a {
   color: #000;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   line-height: 130%; /* 18.2px */
   opacity: 0.7;
 }
@@ -703,26 +732,33 @@ input {
 }
 
 /* ---------------------- MEDIA QUERIES --------------------- */
+/* large screens  */
 @media only screen and (min-width: 1530px) {
   html {
     font-size: 88%;
   }
 
   .section-description {
-    font-size: 18px;
+    font-size: var(--font-size-large);
+  }
+
+  #features .feature-description {
+    font-size: var(--font-size-medium);
   }
 }
 
+/* screens less than or equal to 1024px */
 @media only screen and (max-width: 1024px) {
   html {
     font-size: 52%;
   }
 
   #header nav a {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
   }
 }
 
+/* screens less than or equal to 992px */
 @media only screen and (max-width: 992px) {
   html {
     font-size: 45%;
@@ -730,7 +766,7 @@ input {
 
   #products .card-description,
   #contact p {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
   }
 
   #products .card-photo img:first-child {
@@ -777,6 +813,7 @@ input {
   }
 }
 
+/* screens less than or equal to 768px */
 @media only screen and (max-width: 768px) {
   #header {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -833,6 +870,7 @@ input {
   }
 }
 
+/* screens less than or equal to 640px */
 @media only screen and (max-width: 640px) {
   html {
     font-size: 40%;
@@ -853,7 +891,7 @@ input {
   }
 
   #features .feature-heading {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
   }
 
   #features .feature-description {
@@ -861,6 +899,7 @@ input {
   }
 }
 
+/* screens less than or equal to 480px */
 @media only screen and (max-width: 480px) {
   .section-heading {
     font-size: 4rem;
