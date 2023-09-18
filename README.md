@@ -1,12 +1,12 @@
-# GREEN LAMBDA TEST - HTML/CSS/JS
+# MATOA Template - HTML/CSS/JS
 
 ## Introduction
 
-This is a Frontend Development task that includes designing and development of a template. The website has the following pages:
-
-- Home Page: Includes a compelling headline, key selling points, and a signup CTA.
+This is a Frontend Template Landing Page I have created using HTML, CSS and Vanilla JS. It includes six sections. The landing page includes text animations, custom slider, functioning tabs, responsive navigation, smooth scrolling, advanced use of css and custom JavaScript functionality.
 
 [Link to Live Project](https://gltemplate.netlify.app/)
+
+![charts](/public/images/matoa.png)
 
 ## Technologies Used
 

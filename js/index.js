@@ -21,7 +21,7 @@ const sections = [
   "footer",
 ].map((id) => document.querySelector(`#${id}`));
 
-/////////// function displays side navbar on small screens /////////////
+/////////// functions hides/displays side navbar on small screens /////////////
 const hamburger = document.getElementById("hamburger");
 const crossMark = document.getElementById("cross-mark");
 const sidebar = document.getElementById("header-nav");
@@ -60,7 +60,6 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", () => {
   if (window.innerWidth > 770) {
     headerEl.classList.toggle("fixed", window.pageYOffset > 120);
-
     sections.forEach((section, index) => setActiveNavLink(section, index));
   }
 
