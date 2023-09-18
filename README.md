@@ -4,7 +4,7 @@
 
 This is a Frontend Template Landing Page I have created using HTML, CSS and Vanilla JS. It includes six sections. The landing page includes text animations, custom slider, functioning tabs, responsive navigation, smooth scrolling, advanced use of css and custom JavaScript functionality.
 
-[Link to Live Project](https://gltemplate.netlify.app/)
+[Link to Live Project](https://matoatmeplate.netlify.app/)
 
 ![charts](/public/images/matoa.png)
 
@@ -33,6 +33,6 @@ The project was deployed to Netlify
 
 #### Forking the repository
 
-1. Log in to GitHub and navigate to this project's repository: [Landing Page](https://github.com/muneebali500/MATOA)
+1. Log in to GitHub and navigate to this project's repository: [Matoa Landing Page](https://github.com/muneebali500/matoa)
 2. Just above the navigation menu of the repository (above the Settings button) locate the Fork button
 3. The original copy of the repository is now copied on your GitHub account which allows you to view and/or work on the codes without affecting the original work
